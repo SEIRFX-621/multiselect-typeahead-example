@@ -4,7 +4,7 @@ let ejsLayouts = require('express-ejs-layouts');
 let app = express();
 let moment = require('moment');
 const PORT = process.env.PORT || 3000;
-var methodOverride = require('method-override')
+let methodOverride = require('method-override')
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
