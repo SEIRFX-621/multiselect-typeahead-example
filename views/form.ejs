@@ -1,0 +1,32 @@
+<form action="/test/putTest?_method=PUT" method="POST">
+    <input type="text" name="testing" hidden value="testing put">
+    <button type="submit">submit put example</button>
+</form>
+
+<form action="/test/deleteTest?_method=DELETE" method="POST">
+    <input type="text" name="testing" hidden value="testing delete">
+    <button type="submit">submit delete example</button>
+</form>
+
+
+<form action="/test/selectPut?_method=PUT" method="POST">
+    <select id="example" name="selectOptions" multiple size="3">
+        <% multiselectItems.forEach(item => { %>
+            <option value=<%= item.id %>><%= item.name %></option>
+        <% }); %>
+    </select>
+    <button type="submit">submit select options example</button>
+</form>
+
+
+<script>
+    addEventListener('DOMContentLoaded', (event) => {
+        let mySelect = new vanillaSelectBox("#example",{
+            maxWidth: 500,
+            maxHeight: 400,
+            minWidth: -1,
+            search: true,
+            placeHolder: 'example placeholder'
+    });
+    });
+</script>
