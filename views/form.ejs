@@ -1,3 +1,6 @@
+
+<h2>Put delete test</h2>
+
 <form action="/test/putTest?_method=PUT" method="POST">
     <input type="text" name="testing" hidden value="testing put">
     <button type="submit">submit put example</button>
@@ -8,6 +11,7 @@
     <button type="submit">submit delete example</button>
 </form>
 
+<h2>Multiselect typeahead test</h2>
 
 <form action="/test/selectPut?_method=PUT" method="POST">
     <select id="example" name="selectOptions" multiple size="3">
@@ -16,6 +20,18 @@
         <% }); %>
     </select>
     <button type="submit">submit select options example</button>
+</form>
+
+<h2>Checkbox test, submit on check</h2>
+
+<form action="test/checkboxPutTest?_method=PUT" method="POST">
+    <label for="check1">Checkbox 1</label>
+    <input id="check1" type="checkbox" name="check1" <%= checkbox1 ? "checked" : ""%>>
+    <label for="check2">Checkbox 2</label>
+    <input id="check2" type="checkbox" name="check2" <%= checkbox2 ? "checked" : ""%>>
+    <label for="check3">Checkbox 3</label>
+    <input id="check3" type="checkbox" name="check3" <%= checkbox3 ? "checked" : ""%>>
+    <button type="submit">submit checkboxes</button>
 </form>
 
 
